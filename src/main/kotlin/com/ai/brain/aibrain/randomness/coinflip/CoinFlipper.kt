@@ -11,5 +11,9 @@ class CoinFlipper: GenerationStrategy
     override var maxRange: Int = 1
     override var type: RandomGeneratorRequestType = RandomGeneratorRequestType.COINFLIP
 
-    override fun generate(): String = "Result of the coin flip was ${CoinFace.values().first { it.value == (minRange..maxRange).random()}}"
+    override fun generate(): String
+    {
+        val result = (minRange..maxRange).random()
+        return "Result of the coin flip was ${CoinFace.values().first { it.value == result}}"
+    }
 }

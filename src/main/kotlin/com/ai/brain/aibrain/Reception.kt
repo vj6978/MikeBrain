@@ -13,7 +13,7 @@ class Reception(
 {
     fun parseCommand(command: String): CommandResponseDTO
     {
-        return CommandResponseDTO(randomGenerator("COINFLIP"))
+        return CommandResponseDTO(randomGenerator(command))
     }
 
     fun randomGenerator(type: String = RandomGeneratorRequestType.JOKE.name): String
